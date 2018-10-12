@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: app-customer
+server:
+  port: 8003
+eureka:
+  instance:
+    #eureka 注册显示名称
+    instanceId: ${spring.application.name}:${random.value}
+    #显示ip
+    prefer-ip-address: true
+    hostname: host-customer
+    appname: service-customer
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka
