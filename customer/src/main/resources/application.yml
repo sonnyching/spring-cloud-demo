@@ -13,4 +13,4 @@ eureka:
     appname: service-customer
   client:
     serviceUrl:
-      defaultZone: http://localhost:8001/eureka
+      defaultZone: http://app-eureka-2:7999/eureka
