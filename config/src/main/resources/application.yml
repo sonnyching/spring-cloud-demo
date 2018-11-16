@@ -1,0 +1,19 @@
+
+spring:
+    cloud:
+        config:
+            discovery:
+                enabled: true
+            server:
+                encrypt.enabled: false
+                git:
+                    uri: https://github.com/sonnyching/springCloudConfig.git
+                    searchPaths: '{application}'
+                    username: root
+                    password: root
+
+eureka:
+    client:
+        fetch-registry: false
+        service-url:
+            defaultZone: http://localhost:8001/eureka

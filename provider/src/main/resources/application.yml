@@ -1,8 +1,3 @@
-spring:
-  application:
-    name: app-provider
-server:
-  port: 8002
 eureka:
   instance:
     #eureka 注册显示名称

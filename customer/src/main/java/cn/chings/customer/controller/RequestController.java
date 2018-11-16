@@ -25,4 +25,9 @@ public class RequestController {
 
     }
 
+    @GetMapping("/hello")
+    public String hello(){
+       return "hello";
+    }
+
 }

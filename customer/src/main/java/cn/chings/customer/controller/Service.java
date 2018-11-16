@@ -8,8 +8,11 @@ import org.springframework.web.client.RestTemplate;
 @org.springframework.stereotype.Service
 public class Service {
 
+//    @Autowired
+//    RestTemplate template;
+
     @Autowired
-    RestTemplate template;
+    ProviderFeign provider;
 
     @HystrixCommand(fallbackMethod = "defaultString")
     public String proxy(){
@@ -19,14 +22,16 @@ public class Service {
     }
 
     public String secondCall(){
-        try{
+       /* try{
             System.out.println("休眠了10000毫秒");
             Thread.sleep(10000);
         }catch (InterruptedException e){
             e.printStackTrace();
-        }
+        }*/
 
-        return template.exchange("http://app-provider/getStr", HttpMethod.GET,null,String.class).getBody();
+       return provider.getString();
+
+//        return template.exchange("http://app-provider/getStr", HttpMethod.GET,null,String.class).getBody();
 
     }
 

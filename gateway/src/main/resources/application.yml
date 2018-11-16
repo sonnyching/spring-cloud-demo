@@ -1,0 +1,35 @@
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    app-customer: /customer/**
+    app-provider: /provider/**
+    licensestatic:
+      path: /static/**
+      url: http://www.baidu.com
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+
+#endpoints:
+#  routes:
+#    enabled: true
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#          timeoutInMilliseconds: 5000
+
+#hystrix.command.licensingservice.execution.isolation.thread.timeoutInMilliseconds: 3000
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://app-eureka-2:7999/eureka

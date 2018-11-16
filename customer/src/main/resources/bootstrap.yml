@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: app-customer
+    id: app-customer
+  profiles:
+    active:
+      dev
+  cloud:
+    config:
+      uri: http://localhost:8004
+server:
+  port: 8003

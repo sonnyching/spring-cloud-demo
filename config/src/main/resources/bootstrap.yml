@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: app-config-center
+server:
+  port: 8004

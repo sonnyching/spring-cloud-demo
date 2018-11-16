@@ -1,9 +1,3 @@
-spring:
-  application:
-    name: app-customer
-    id: app-customer
-server:
-  port: 8003
 
 ribbon:
   ReadTimeout: 1000
